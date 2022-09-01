@@ -10,7 +10,7 @@ const Footer = () => (
       <IconButton href="https://github.com/mbkprogrammer/" sx={{ color: 'text.primary' }}>
         <AiFillGithub />
       </IconButton>
-      <IconButton href="https://www.instagram.com/mbkprogramer/" sx={{ color: 'text.primary' }}>
+      <IconButton href="https://www.instagram.com/mbkProgrammer/" sx={{ color: 'text.primary' }}>
         <AiFillInstagram />
       </IconButton>
       <IconButton href="https://www.linkedin.com/in/mohamad-baqer-kohie-869315212" sx={{ color: 'text.primary' }}>

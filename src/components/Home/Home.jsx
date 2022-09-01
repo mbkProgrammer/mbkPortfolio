@@ -13,7 +13,7 @@ const Home = () => (
         <br />
         I'm Mohammad Baqer Kohie
       </Typography>
-      <Typography color="text.primary" variant="h3" fontSize="16px" fontWeight="300" textAlign="start">
+      <Typography color="text.primary" variant="h3" textAlign="start">
         I am developing the front of web.
       </Typography>
       <Box display="flex" justifyContent="center" my="40px">
