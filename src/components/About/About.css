@@ -1,0 +1,48 @@
+.skill__section {
+    margin: 30px 0;
+}
+@media (max-width: 780px){
+    .about--title{
+        flex-direction: column;
+    }
+    .about--title h3{
+        text-align: center;
+    }
+    .about--title img{
+        max-width: 350px;
+    }
+}
+
+.skill_card {
+  padding: 16px;
+  border: 2px solid;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 16rem;
+  animation-name: scaleIn;
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.skill_card {
+    margin: 10px 5px;
+}
+.skill_card p {
+ margin: 0 10px;
+}

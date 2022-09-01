@@ -1,0 +1,30 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 85vw;
+    margin: auto;
+}
+
+.home--img {
+    height: 100%;
+    max-width: 407px;
+}
+
+.home--content {
+    margin-top: 9rem;
+    margin-left: 30px;
+}
+
+@media (max-width: 780px) {
+    .home--content {
+        margin-top: 5px;
+    }
+    .home--img {
+        max-width: 350px;
+    }
+    .home {
+        flex-direction: column;
+        max-width: 95vw;
+    }
+}
