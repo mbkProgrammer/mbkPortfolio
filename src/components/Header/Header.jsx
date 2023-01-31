@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import {
-  IconButton, Box, Typography, Drawer, Button,
+  IconButton, Box, Typography, Drawer,
 } from '@mui/material';
 import { FaBars } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { MdOutlineClose, MdDarkMode, MdLightMode } from 'react-icons/md';
 import TabList from './TabList';
+import LanguageChanger from '../LanguageChanger/LanguageChanger';
 
 const Header = ({ darkMode, setDarkMode }) => {
   const [value, setValue] = useState(0);
@@ -93,13 +94,16 @@ const Header = ({ darkMode, setDarkMode }) => {
             <Typography variant="h6" color="primary">
               {pageName}
             </Typography>
-            <IconButton
-              aria-label="toggle"
-              sx={{ color: 'primary.light' }}
-              onClick={handleDarkMode}
-            >
-              {darkMode ? <MdLightMode /> : <MdDarkMode />}
-            </IconButton>
+            <div>
+              <IconButton
+                aria-label="toggle"
+                sx={{ color: 'primary.light' }}
+                onClick={handleDarkMode}
+              >
+                {darkMode ? <MdLightMode /> : <MdDarkMode />}
+              </IconButton>
+              <LanguageChanger />
+            </div>
             <Drawer
               anchor="top"
               open={mobileOpen}
@@ -141,6 +145,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             >
               {darkMode ? <MdLightMode /> : <MdDarkMode />}
             </IconButton>
+            <LanguageChanger />
           </Box>
         )}
       </Tabs>
