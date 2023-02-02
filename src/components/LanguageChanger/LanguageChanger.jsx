@@ -13,7 +13,7 @@ const LanguageChanger = () => {
     setSelectedIndex(n);
   };
   const handleActiveList = () => {
-    setShowlist(!showlist);
+    // setShowlist(!showlist);
   };
 
   return (
@@ -70,7 +70,7 @@ const LanguageChanger = () => {
 
         .LanguageChanger:hover .language__button {
           border-radius: 0;
-          background-color: ${palette.primary.dark} !important;
+          background-color: ${palette.primary.main} !important;
           color: #FAFAFA !important;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
@@ -82,7 +82,7 @@ const LanguageChanger = () => {
 
         .showlist .language__button {
           border-radius: 0;
-          background-color: ${palette.primary.dark} !important;
+          background-color: ${palette.primary.main} !important;
           color: #FAFAFA !important;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
