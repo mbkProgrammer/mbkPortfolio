@@ -94,7 +94,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             <Typography variant="h6" color="primary">
               {pageName}
             </Typography>
-            <div>
+            <Box display="flex">
               <IconButton
                 aria-label="toggle"
                 sx={{ color: 'primary.light' }}
@@ -103,7 +103,7 @@ const Header = ({ darkMode, setDarkMode }) => {
                 {darkMode ? <MdLightMode /> : <MdDarkMode />}
               </IconButton>
               <LanguageChanger />
-            </div>
+            </Box>
             <Drawer
               anchor="top"
               open={mobileOpen}
