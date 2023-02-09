@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import {
-  Box, Card, Typography,
+  Box, Card, Dialog, Typography,
 } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import './About.css';
@@ -13,8 +13,10 @@ import { MdApi, MdOutlineSettingsCell } from 'react-icons/md';
 import {
   SiGraphql, SiNextdotjs, SiPwa, SiRedux,
 } from 'react-icons/si';
+import { Trans, useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const theme = useTheme();
   return (
     <Box>
@@ -33,13 +35,9 @@ const About = () => {
             textAlign="left"
             mt="70px"
           >
-            I'm Mohammad Baqer Kohie
-            <br />
-            <span style={{ color: `${theme.palette.primary.main}` }}>
-              Frontend
-            </span>
-            {' '}
-            Developer
+            <Trans components={{ span: <span style={{ color: `${theme.palette.primary.main}` }} /> }}>
+              about.title
+            </Trans>
           </Typography>
         </Box>
         <Typography
@@ -47,8 +45,7 @@ const About = () => {
           color="text.primary"
           style={{ textAlign: 'start', padding: '30px' }}
         >
-          I'm Mohammad Baqer Kohie, programmer and frontend web developer. I
-          will help you to make your website in the best way.
+          {t('about.desc')}
         </Typography>
       </section>
       <section className="skill__section">
@@ -57,9 +54,12 @@ const About = () => {
           color="text.primary"
           style={{ textAlign: 'start' }}
         >
-          Technologies for working
+          {t('about.tecTitle')}
         </Typography>
-        <Box sx={{ padding: '20px', display: 'flex', flexWrap: 'wrap' }}>
+        <Box sx={{
+          padding: '20px', display: 'flex', flexWrap: 'wrap', direction: 'ltr',
+        }}
+        >
           <Card
             className="skill_card"
             sx={{

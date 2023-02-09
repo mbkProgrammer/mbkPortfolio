@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useTransition } from 'react';
 import { styled } from '@mui/material/styles';
 import {
   IconButton, Box, Typography, Drawer,
@@ -6,6 +6,7 @@ import {
 import { FaBars } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import { MdOutlineClose, MdDarkMode, MdLightMode } from 'react-icons/md';
+import { useTranslation } from 'react-i18next';
 import TabList from './TabList';
 import LanguageChanger from '../LanguageChanger/LanguageChanger';
 
@@ -14,6 +15,7 @@ const Header = ({ darkMode, setDarkMode }) => {
   const [pageName, setPageName] = useState(0);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [windowWidth, setWindowWidth] = useState(700);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -24,19 +26,19 @@ const Header = ({ darkMode, setDarkMode }) => {
     switch (location.pathname) {
       case '/':
         setValue(0);
-        setPageName('Home');
+        setPageName('home');
         break;
       case '/About':
         setValue(1);
-        setPageName('About');
+        setPageName('about');
         break;
       case '/Portfolio':
         setValue(2);
-        setPageName('Portfolio');
+        setPageName('portfolio');
         break;
       case '/Contact':
         setValue(3);
-        setPageName('Contact');
+        setPageName('contact');
         break;
 
       default:
@@ -92,7 +94,7 @@ const Header = ({ darkMode, setDarkMode }) => {
               <FaBars />
             </IconButton>
             <Typography variant="h6" color="primary">
-              {pageName}
+              {t(`header.${pageName}`)}
             </Typography>
             <Box display="flex">
               <IconButton
@@ -100,7 +102,7 @@ const Header = ({ darkMode, setDarkMode }) => {
                 sx={{ color: 'primary.light' }}
                 onClick={handleDarkMode}
               >
-                {darkMode ? <MdLightMode /> : <MdDarkMode />}
+                {darkMode ? <MdLightMode color="#FDB813" /> : <MdDarkMode />}
               </IconButton>
               <LanguageChanger />
             </Box>
@@ -143,7 +145,7 @@ const Header = ({ darkMode, setDarkMode }) => {
               sx={{ color: 'primary.light' }}
               onClick={handleDarkMode}
             >
-              {darkMode ? <MdLightMode /> : <MdDarkMode />}
+              {darkMode ? <MdLightMode color="#FDB813" /> : <MdDarkMode />}
             </IconButton>
             <LanguageChanger />
           </Box>

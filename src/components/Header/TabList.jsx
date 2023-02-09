@@ -3,9 +3,11 @@ import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const TabList = ({ handleDrawerToggle }) => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const { pathname } = useLocation();
   const TabsLists = styled(Box)`
     background-color: inherit;
@@ -25,6 +27,7 @@ const TabList = ({ handleDrawerToggle }) => {
 
   const Tab = styled(Link)`
     color: ${theme.palette.primary.dark};
+    font-family: Shabnam;
     text-align: center;
     padding: 9px 5px;
     margin: 0 18px;
@@ -74,28 +77,28 @@ const TabList = ({ handleDrawerToggle }) => {
         to="/"
         onClick={handleDrawerToggle}
       >
-        Home
+        {t('header.home')}
       </Tab>
       <Tab
         className={pathname === '/About' ? 'selected' : ''}
         to="/About"
         onClick={handleDrawerToggle}
       >
-        About
+        {t('header.about')}
       </Tab>
       <Tab
         className={pathname === '/Portfolio' ? 'selected' : ''}
         to="/Portfolio"
         onClick={handleDrawerToggle}
       >
-        Portfolio
+        {t('header.portfolio')}
       </Tab>
       <Tab
         className={pathname === '/Contact' ? 'selected' : ''}
         to="/Contact"
         onClick={handleDrawerToggle}
       >
-        Contact
+        {t('header.contact')}
       </Tab>
     </TabsLists>
   );

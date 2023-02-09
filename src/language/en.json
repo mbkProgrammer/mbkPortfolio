@@ -1,0 +1,31 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": {
+      "text1": "Hay There👋 <br /> I'm Mohammad Baqer Kohie.",
+      "text2": "front-end web developer!"
+    },
+    "buttons": {
+      "about": "About Me",
+      "portfolio": "😮 Let’s see portfolios"
+    }
+  },
+  "about": {
+    "title": "I'm Mohammad Baqer Kohie <br /><span >Frontend </span>Developer",
+    "desc": "I'm Mohammad Baqer Kohie, programmer and frontend web developer. I will help you to make your website in the best way.",
+    "tecTitle": "Technologies for working"
+  },
+  "contact": {
+    "title": "You can reach me any time🙂",
+    "github": "GitHub",
+    "linkedin": "LinKedin",
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp"
+  }
+}

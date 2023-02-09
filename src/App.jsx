@@ -2,15 +2,20 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next';
 import {
   Layout, About, Contact, Home, Portfolio,
 } from './components';
-import darkTheme from './config/darkTheme';
-import lightTheme from './config/lightTheme';
+import enDarkTheme from './config/enDarkTheme';
+import enLightTheme from './config/enLightTheme';
+import faLightTheme from './config/faLightTheme';
+import faDarkTheme from './config/faDarkTheme';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [updateDarkMode, setUpdateDarkMode] = useState(false);
+  const [theme, setTheme] = useState(enDarkTheme);
+  const { i18n } = useTranslation();
 
   const [online, setOnline] = useState(true);
   useEffect(() => {
@@ -23,10 +28,25 @@ const App = () => {
   const handleOnline = () => {
     setOnline(navigator.onLine);
   };
+
   useEffect(() => {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOnline);
   });
+
+  useEffect(() => {
+    if (darkMode) {
+      if (i18n.language === 'fa-IR' || i18n.language === 'fa') {
+        setTheme(faDarkTheme);
+      } else {
+        setTheme(enDarkTheme);
+      }
+    } else if (i18n.language === 'fa-IR' || i18n.language === 'fa') {
+      setTheme(faLightTheme);
+    } else {
+      setTheme(enLightTheme);
+    }
+  }, [darkMode, i18n.language]);
 
   useEffect(() => {
     console.log('online :>> ', online);
@@ -49,8 +69,8 @@ const App = () => {
     }
   }, []);
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <div className="App">
+    <div className="App" dir={i18n.language === 'en' ? 'ltr' : 'rtl'}>
+      <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
             <Routes>
@@ -61,8 +81,8 @@ const App = () => {
             </Routes>
           </Layout>
         </BrowserRouter>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
   );
 };
 

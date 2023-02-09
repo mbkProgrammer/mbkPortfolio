@@ -3,15 +3,15 @@ import {
   IconButton, List, ListItemButton, ListItemText, useTheme,
 } from '@mui/material';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { RiGlobalLine } from 'react-icons/ri';
 
 const LanguageChanger = () => {
   const { palette } = useTheme();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showlist, setShowlist] = useState(false);
-  const handleChangeLanguage = (e, n) => {
-    setSelectedIndex(n);
-  };
+  const { i18n } = useTranslation();
+
   const handleActiveList = () => {
     // setShowlist(!showlist);
   };
@@ -35,14 +35,14 @@ const LanguageChanger = () => {
         className="language__list"
       >
         <ListItemButton
-          selected={selectedIndex === 0}
-          onClick={(event) => handleChangeLanguage(event, 0)}
+          selected={i18n.language === 'en-US' || i18n.language === 'en'}
+          onClick={() => i18n.changeLanguage('en')}
         >
           <ListItemText primary="English" />
         </ListItemButton>
         <ListItemButton
-          selected={selectedIndex === 1}
-          onClick={(event) => handleChangeLanguage(event, 1)}
+          selected={i18n.language === 'fa-IR' || i18n.language === 'fa'}
+          onClick={() => i18n.changeLanguage('fa')}
         >
           <ListItemText sx={{ direction: 'rtl', textAlign: 'start' }} primary="فارسی" />
         </ListItemButton>
