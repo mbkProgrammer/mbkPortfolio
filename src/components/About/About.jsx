@@ -14,6 +14,7 @@ import {
   SiGraphql, SiNextdotjs, SiPwa, SiRedux,
 } from 'react-icons/si';
 import { Trans, useTranslation } from 'react-i18next';
+import dataFa from '../../language/fa.json';
 
 const About = () => {
   const { t } = useTranslation();
@@ -47,6 +48,21 @@ const About = () => {
         >
           {t('about.desc')}
         </Typography>
+        <Typography
+          variant="h4"
+          color="text.primary"
+          textAlign="start"
+          mt="20px"
+        >
+          {t('about.experianceTittle')}
+        </Typography>
+        <ul style={{ textAlign: 'start' }}>
+          {
+            dataFa.about.experiance.map((data) => (
+              <Typography sx={{ listStyleType: 'revert-layer' }} color="text.primary" key={data.id}>{t(`about.experiance.${data.id}.text`, { returnObjects: true })}</Typography>
+            ))
+          }
+        </ul>
       </section>
       <section className="skill__section">
         <Typography

@@ -20,10 +20,10 @@ const Home = () => {
           {t('home.title.text2')}
         </Typography>
         <Box display="flex" justifyContent="center" my="40px">
-          <Link to="/About">
-            <Button variant="contained" sx={{ margin: '0 5px' }}>{t('home.buttons.about')}</Button>
+          <Link to="/About" style={{ textDecoration: 'none' }}>
+            <Button variant="contained" sx={{ margin: '0 5px', textDecoration: 'none' }}>{t('home.buttons.about')}</Button>
           </Link>
-          <Link to="/Portfolio">
+          <Link to="/Portfolio" style={{ textDecoration: 'none' }}>
             <Button variant="outlined" sx={{ margin: '0 5px' }}>{t('home.buttons.portfolio')}</Button>
           </Link>
         </Box>

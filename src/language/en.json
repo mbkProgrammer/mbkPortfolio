@@ -17,8 +17,27 @@
   },
   "about": {
     "title": "I'm Mohammad Baqer Kohie <br /><span >Frontend </span>Developer",
-    "desc": "I'm Mohammad Baqer Kohie, programmer and frontend web developer. I will help you to make your website in the best way.",
-    "tecTitle": "Technologies for working"
+    "desc": "Hi, I'm Mohammad Bagher Koohi, a frontend web developer and programmer. My goal is to help you bring the best version of your website to the online world, as I am committed to enhancing user experience and optimizing website performance. With creative ideas and advanced technologies, I will accompany you on this journey to create the best possible outcome for your website.",
+    "tecTitle": "Technologies for working",
+    "experianceTittle":"experiance",
+    "experiance": [
+      {
+        "text": "Experience working as a freelancer on several projects.",
+        "id": "0"
+      },
+      {
+        "text": "Designing multiple web projects, including a chat application and an online store website.",
+        "id": "1"
+      },
+      {
+        "text": "Experience of participating in multiple programming competitions as an individual and as part of a team.",
+        "id": "2"
+      },
+      {
+        "text": "Participation in a hackathon as a team member and obtaining the second place.",
+        "id": "3"
+      }
+    ]
   },
   "contact": {
     "title": "You can reach me any time🙂",

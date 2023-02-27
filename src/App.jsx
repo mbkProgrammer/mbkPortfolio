@@ -18,21 +18,21 @@ const App = () => {
   const { i18n } = useTranslation();
 
   const [online, setOnline] = useState(true);
-  useEffect(() => {
-    navigator.serviceWorker
-      .register('./sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-      });
-  }, []);
-  const handleOnline = () => {
-    setOnline(navigator.onLine);
-  };
+  // useEffect(() => {
+  //   navigator.serviceWorker
+  //     .register('./sw.js')
+  //     .then((registration) => {
+  //       console.log('SW registered: ', registration);
+  //     });
+  // }, []);
+  // const handleOnline = () => {
+  //   setOnline(navigator.onLine);
+  // };
 
-  useEffect(() => {
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOnline);
-  });
+  // useEffect(() => {
+  //   window.addEventListener('online', handleOnline);
+  //   window.addEventListener('offline', handleOnline);
+  // });
 
   useEffect(() => {
     if (darkMode) {
@@ -47,10 +47,6 @@ const App = () => {
       setTheme(enLightTheme);
     }
   }, [darkMode, i18n.language]);
-
-  useEffect(() => {
-    console.log('online :>> ', online);
-  }, [online]);
 
   useEffect(() => {
     if (!updateDarkMode) {
