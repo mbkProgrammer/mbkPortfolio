@@ -29,7 +29,7 @@ const About = () => {
           alignItems="center"
           mb="10px"
         >
-          <img src="./assets/img/saly-10.png" alt="saly" />
+          <img src="./assets/img/Saly.png" alt="saly" />
           <Typography
             variant="h3"
             color="text.primary"
