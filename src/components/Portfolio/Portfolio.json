@@ -19,7 +19,7 @@
     },
     {
         "tittle": "Calculator",
-        "caption": "App develope by javascript, Calculater",
+        "caption": "Perform fast and accurate calculations with this simple and user-friendly calculator app developed using JavaScript.",
         "img": "./assets/img/portfolio/calculater.png",
         "href": "https://calculater-omega.vercel.app/"
     }

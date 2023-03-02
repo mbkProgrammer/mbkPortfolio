@@ -9,57 +9,63 @@ import {
 import React from 'react';
 import { BiLinkExternal } from 'react-icons/bi';
 import { useTranslation } from 'react-i18next';
-import PORTFOLIO from './Portfolio.json';
+import dataFa from '../../language/fa.json';
 import './Portfolio.css';
 
 const Portfolio = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const data = dataFa.portfolio.item;
   return (
-    <Box
-      display="flex"
-      justifyContent="flex-start"
-      alignItems="center"
-      flexWrap="wrap"
-      width="100%"
-    >
-      {PORTFOLIO.map((item) => (
-        <Card
-          sx={{
-            backgroundColor: 'Background.paper',
-            color: 'text.primary',
-            margin: '23px 22px',
-            borderRadius: '10px',
-          }}
-          className="portfolio__cards"
-        >
-          <CardMedia
-            component="img"
-            image={item.img}
-            className="card__media"
-          />
-          <CardContent
+    <div>
+      <Typography
+        variant="h3"
+        color="text.primary"
+        textAlign="center"
+        mt="30px"
+        mb="10px"
+      >
+        {t('portfolio.tittle')}
+      </Typography>
+      <Box
+        display="flex"
+        justifyContent="flex-start"
+        alignItems="center"
+        flexWrap="wrap"
+        width="100%"
+      >
+        {data.map((item) => (
+          <Card
             sx={{
-              textAlign: 'left',
-              position: 'relative',
-              zIndex: '10',
+              backgroundColor: 'Background.paper',
+              color: 'text.primary',
+              margin: '23px 22px',
+              borderRadius: '10px',
             }}
+            className="portfolio__cards"
+            key={item.id}
           >
-            <Typography variant="h5" textAlign="left">
-              {item.tittle}
-            </Typography>
-            <Typography
-              variant="body2"
-              textAlign="left"
-              mt="5px"
-              mb="30px"
+            <CardMedia
+              component="img"
+              image={item.img}
+              className="card__media"
+            />
+            <CardContent
+              sx={{
+                textAlign: 'left',
+                position: 'relative',
+                zIndex: '10',
+              }}
             >
-              {item.caption}
-            </Typography>
-            {i18n.language === 'en'
-              ? (
+              <Typography variant="h5" textAlign="start">
+                {t(`portfolio.item.${item.id}.tittle`)}
+              </Typography>
+              <Typography variant="body2" textAlign="start" mt="5px" mb="30px">
+                {t(`portfolio.item.${item.id}.description`)}
+              </Typography>
+              {i18n.language === 'en' ? (
                 <Button
                   startIcon={<BiLinkExternal style={{ marginLeft: '10px' }} />}
-                  href={item.href}
+                  href={item.link}
                   sx={{
                     position: 'absolute',
                     bottom: '10px',
@@ -68,24 +74,24 @@ const Portfolio = () => {
                 >
                   See
                 </Button>
-              )
-              : (
+              ) : (
                 <Button
                   startIcon={<BiLinkExternal style={{ marginLeft: '10px' }} />}
-                  href={item.href}
+                  href={item.link}
                   sx={{
                     position: 'absolute',
                     bottom: '10px',
                     left: '10px',
                   }}
                 >
-                  See
+                  دیدن
                 </Button>
               )}
-          </CardContent>
-        </Card>
-      ))}
-    </Box>
+            </CardContent>
+          </Card>
+        ))}
+      </Box>
+    </div>
   );
 };
 
