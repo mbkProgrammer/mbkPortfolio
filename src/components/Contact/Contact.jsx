@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import './Contact.css';
 import {
-  BsDiscord, BsGithub, BsInstagram, BsLinkedin, BsWhatsapp,
+  BsDiscord, BsFillTelephoneFill, BsGithub, BsInstagram, BsLinkedin, BsWhatsapp,
 } from 'react-icons/bs';
 import { RiExternalLinkFill } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
@@ -22,6 +22,18 @@ const Contact = () => {
           marginTop: '30px', display: 'flex', flexDirection: 'column',
         }}
         >
+          <Link href="tel:+98-991-659-6573" color="text.primary" overflow="hidden" variant="h5" className="contact__link">
+            <BsFillTelephoneFill className="contact__link__icon" />
+            <span>
+              {t('contact.phone')}
+              :
+              {' '}
+            </span>
+            <div className="phone__number" dir="ltr">
+              +98 991 659 6573
+            </div>
+            <RiExternalLinkFill className="contact__link--action" />
+          </Link>
           <Link href="https://github.com/mbkProgrammer/" color="text.primary" overflow="hidden" variant="h5" className="contact__link">
             <BsGithub className="contact__link__icon" />
             <span>

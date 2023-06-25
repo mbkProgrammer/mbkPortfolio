@@ -8,7 +8,8 @@
 
 .home--img {
     height: 100%;
-    max-width: 407px;
+    max-width: 470px;
+    user-select: none;
 }
 
 .home--content {

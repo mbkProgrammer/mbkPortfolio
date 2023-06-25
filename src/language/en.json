@@ -7,35 +7,31 @@
   },
   "home": {
     "title": {
-      "text1": "Hay There👋 <br /> I'm Mohammad Baqer Kohie.",
-      "text2": "front-end web developer!"
+      "text1": "Transform Your Business",
+      "text2": "Unlocking Opportunities for Growth and Success"
     },
     "buttons": {
-      "about": "About Me",
+      "about": "About Us",
       "portfolio": "😮 Let’s see portfolios"
     }
   },
   "about": {
-    "title": "I'm Mohammad Baqer Kohie <br /><span >Frontend </span>Developer",
-    "desc": "Hi, I'm Mohammad Bagher Koohi, a frontend web developer and programmer. My goal is to help you bring the best version of your website to the online world, as I am committed to enhancing user experience and optimizing website performance. With creative ideas and advanced technologies, I will accompany you on this journey to create the best possible outcome for your website.",
+    "title": "I'm Mohammad Baqer Kohie <br /><span >Full-Stack </span>Developer",
+    "desc": "Hello, I am Mohammad Bagher Koohi, the team leader, full-stack web developer and native Android and iOS application developer. We bring the best version of your website or application to the online world. Our goal is to enhance user experience and improve the efficiency of your work and business. With creative ideas and the use of advanced and up-to-date technologies, we will be with you on this journey to create the best outcome for you and your work and business.",
     "tecTitle": "Technologies for working",
     "experianceTittle":"experiance",
     "experiance": [
       {
-        "text": "Experience working as a freelancer on several projects.",
+        "text": "Active participation in several team-based open-source projects.",
         "id": "0"
       },
       {
-        "text": "Designing multiple web projects, including a chat application and an online store website.",
+        "text": "Experience working as a freelancer",
         "id": "1"
       },
       {
-        "text": "Experience of participating in multiple programming competitions as an individual and as part of a team.",
+        "text": "Developing multiple web projects, including a chat application and an online store website.",
         "id": "2"
-      },
-      {
-        "text": "Participation in a hackathon as a team member and obtaining the second place.",
-        "id": "3"
       }
     ]
   },
@@ -45,7 +41,8 @@
     "linkedin": "LinKedin",
     "discord": "Discord",
     "instagram": "Instagram",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "phone": "Phone"
   },
   "portfolio": {
     "tittle": "A Collection of Creative Projects",

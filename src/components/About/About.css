@@ -1,16 +1,21 @@
 .skill__section {
-    margin: 30px 0;
+  margin: 30px 0;
 }
-@media (max-width: 780px){
-    .about--title{
-        flex-direction: column;
-    }
-    .about--title h3{
-        text-align: center;
-    }
-    .about--title img{
-        max-width: 350px;
-    }
+.about--title img {
+  height: 100%;
+  max-width: 400px;
+  user-select: none;
+}
+@media (max-width: 780px) {
+  .about--title {
+    flex-direction: column;
+  }
+  .about--title h3 {
+    text-align: center;
+  }
+  .about--title img {
+    max-width: 350px;
+  }
 }
 
 .skill_card {
@@ -30,19 +35,19 @@
 }
 
 @keyframes scaleIn {
-    0% {
-        opacity: 0;
-        transform: scaleY(0);
-    }
-    100% {
-        opacity: 1;
-        transform: scaleY(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 .skill_card {
-    margin: 10px 5px;
+  margin: 10px 5px;
 }
 .skill_card p {
- margin: 0 10px;
+  margin: 0 10px;
 }
