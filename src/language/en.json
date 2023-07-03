@@ -36,7 +36,12 @@
     ]
   },
   "contact": {
-    "title": "You can reach me any time🙂",
+    "title": "You can reach us any time🙂",
+    "formTitle": "Share your number so that our experts can contact you as soon as possible.",
+    "numberInput": "Phone",
+    "fullNameInput": "Name",
+    "formSubmit": "Submit",
+    "alertText": "Your information has been registered, our experts will contact you as soon as possible",
     "github": "GitHub",
     "linkedin": "LinKedin",
     "discord": "Discord",

@@ -1,8 +1,12 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
+import rtlPlugin from 'stylis-plugin-rtl';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
 import {
   Layout, About, Contact, Home, Portfolio,
 } from './components';
@@ -16,6 +20,15 @@ const App = () => {
   const [updateDarkMode, setUpdateDarkMode] = useState(false);
   const [theme, setTheme] = useState(enDarkTheme);
   const { i18n } = useTranslation();
+
+  const cacheRtl = createCache({
+    key: 'muirtl',
+    stylisPlugins: [prefixer, rtlPlugin],
+  });
+  const cacheLtr = createCache({
+    key: 'muirtl',
+    stylisPlugins: [prefixer],
+  });
 
   const [online, setOnline] = useState(true);
   // useEffect(() => {
@@ -64,20 +77,25 @@ const App = () => {
       setDarkMode(false);
     }
   }, []);
+  useLayoutEffect(() => {
+    document.body.setAttribute('dir', i18n.language === 'en' ? 'ltr' : 'rtl');
+  }, [i18n.language]);
   return (
     <div className="App" dir={i18n.language === 'en' ? 'ltr' : 'rtl'}>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/Portfolio" element={<Portfolio />} />
-              <Route path="/Contact" element={<Contact />} />
-            </Routes>
-          </Layout>
-        </BrowserRouter>
-      </ThemeProvider>
+      <CacheProvider value={i18n.language === 'en' ? cacheLtr : cacheRtl}>
+        <ThemeProvider theme={theme}>
+          <BrowserRouter>
+            <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/Portfolio" element={<Portfolio />} />
+                <Route path="/Contact" element={<Contact />} />
+              </Routes>
+            </Layout>
+          </BrowserRouter>
+        </ThemeProvider>
+      </CacheProvider>
     </div>
   );
 };

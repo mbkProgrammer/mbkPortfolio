@@ -8,11 +8,26 @@
 }
 .phone__number {
   margin: 0 30px;
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+
+.MuiInputBase-root {
+  border-radius: 16px !important;
+}
+#phoneNumber {
+  font-family: sans-serif;
+}
+
+.contactForm {
+  width: 40vw;
+  text-align: start;
 }
 
 .contact__link span {
   transform: translateX(-25px);
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .contact__link__icon {
@@ -37,7 +52,7 @@
 }
 .contact__img {
   height: 100%;
-  width: 100%;
+  width: 40vw;
   max-width: 480px;
   user-select: none;
 }
@@ -57,5 +72,11 @@
   .contact__link__icon {
     transform: translateY(0);
     opacity: 1;
+  }
+  .phone__number {
+    margin: 0 10px;
+  }
+  .contactForm {
+    width: 100%;
   }
 }
