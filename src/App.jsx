@@ -48,6 +48,20 @@ const App = () => {
   // });
 
   useEffect(() => {
+    // Start Clarity tracking
+    if (window.clarity) {
+      window.clarity('track', 'pageview');
+    }
+
+    // Clean up Clarity tracking when component unmounts
+    return () => {
+      if (window.clarity) {
+        window.clarity('track', 'pageview', { keepalive: false });
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     if (darkMode) {
       if (i18n.language === 'fa-IR' || i18n.language === 'fa') {
         setTheme(faDarkTheme);
