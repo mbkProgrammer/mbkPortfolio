@@ -27,21 +27,21 @@ const Portfolio = () => {
         {t('portfolio.tittle')}
       </Typography>
       <Box
-        display="flex"
-        justifyContent="flex-start"
-        alignItems="center"
-        flexWrap="wrap"
+        display="grid"
         width="100%"
+        rowGap="12px"
+        columnGap="16px"
+        className="portfolio_container"
       >
-        {data.map((item) => (
+        {data.map((item, i) => (
           <Card
             sx={{
               backgroundColor: 'Background.paper',
               color: 'text.primary',
-              margin: '23px 22px',
+              // margin: '23px 22px',
               borderRadius: '10px',
             }}
-            className="portfolio__cards"
+            // className="portfolio__cards"
             key={item.id}
           >
             <CardMedia
@@ -57,10 +57,10 @@ const Portfolio = () => {
               }}
             >
               <Typography variant="h5" textAlign="start">
-                {t(`portfolio.item.${item.id}.tittle`)}
+                {t(`portfolio.item.${i}.tittle`)}
               </Typography>
               <Typography variant="body2" textAlign="start" mt="5px" mb="30px">
-                {t(`portfolio.item.${item.id}.description`)}
+                {t(`portfolio.item.${i}.description`)}
               </Typography>
               {i18n.language === 'en' ? (
                 <Button

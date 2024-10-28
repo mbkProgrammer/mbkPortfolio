@@ -59,7 +59,7 @@ const TabList = ({ handleDrawerToggle }) => {
       transform: scaleX(1);
     }
     &.selected {
-      color: ${theme.palette.secondary.light};
+      color: ${theme.palette.action.active};
     }
     @media (max-width: 600px) {
       & {

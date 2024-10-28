@@ -11,13 +11,13 @@
       "text2": "Unlocking Opportunities for Growth and Success"
     },
     "buttons": {
-      "about": "About Us",
+      "about": "About Me",
       "portfolio": "😮 Let’s see portfolios"
     }
   },
   "about": {
     "title": "I'm Mohammad Baqer Kohie <br /><span >Full-Stack </span>Developer",
-    "desc": "Hello, I am Mohammad Bagher Koohi, the team leader, full-stack web developer and native Android and iOS application developer. We bring the best version of your website or application to the online world. Our goal is to enhance user experience and improve the efficiency of your work and business. With creative ideas and the use of advanced and up-to-date technologies, we will be with you on this journey to create the best outcome for you and your work and business.",
+    "desc": "Hello, I am Mohammad Baqer Kohie, full-stack web developer. I bring the best version of your website or web application to the online world. My goal is to enhance user experience and improve the efficiency of your business. With creative ideas and the use of advanced and up-to-date technologies, I will be with you on this journey to create the best outcome for you and your work and business.",
     "tecTitle": "Technologies for working",
     "experianceTittle":"experiance",
     "experiance": [
@@ -36,7 +36,7 @@
     ]
   },
   "contact": {
-    "title": "You can reach us any time🙂",
+    "title": "You can reach me any time🙂",
     "formTitle": "Share your number so that our experts can contact you as soon as possible.",
     "numberInput": "Phone",
     "fullNameInput": "Name",
@@ -52,6 +52,72 @@
   "portfolio": {
     "tittle": "A Collection of Creative Projects",
     "item": [
+      {
+        "id": "9",
+        "tittle": "Institute for sales and support of entrance exam packages",
+        "description": "A platform for students and professors and supporters of Kushan Institute for online classes and also to review students' assignments.",
+        "sourceCode": null,
+        "link": "https://koshan.vercel.app/",
+        "image": ["/assets/img/portfolio/koshan.png"],
+        "img": "/assets/img/portfolio/koshan.png",
+        "features": [
+          "Responsive",
+          "Server Side Rendering(SSR)",
+          "fast load",
+          "Multi-level login of teacher, student, support, admin",
+          "Backend with NodeJS and PostgreSQL database",
+          "Fully jalali calendar for managing student events",
+          "The project was left unfinished due to problems encountered by the employer"
+        ]
+      },
+      {
+        "id": "13",
+        "tittle": "Config Outline shopping platform",
+        "description": "A platform to buy config outline and also display the amount of user consumption with various graphs.",
+        "sourceCode": null,
+        "link": "https://xrayglobal.co/",
+        "image": ["/assets/img/portfolio/xrayglobal.png"],
+        "img": "/assets/img/portfolio/xrayglobal.png",
+        "features": [
+          "Responsive",
+          "Server Side Rendering(SSR)",
+          "fast load",
+          "Multi-level Login",
+          "Backend API written with Python",
+          "Various graphs to show the amount of sales"
+        ]
+      },
+      {
+        "id": "11",
+        "tittle": "Platform for calculating and finding POS devices",
+        "description": "eProPay is a platform for all pose device providers in the UK. With the help of this platform, you can find the desired pose device and get its annual and monthly costs.",
+        "sourceCode": null,
+        "link": "https://epropay.co.uk/",
+        "image": ["/assets/img/portfolio/epropay.png"],
+        "img": "/assets/img/portfolio/epropay.png",
+        "features": [
+          "Responsive",
+          "Server Side Rendering(SSR)",
+          "fast load",
+          "Calculate POS costs",
+          "Filter products according to user inputs"
+        ]
+      },
+      {
+        "id": "12",
+        "tittle": "Router sales and charging platform",
+        "description": "Sales platform and XRayBox router catalog",
+        "sourceCode": null,
+        "link": "https://xraybox.net/",
+        "image": ["/assets/img/portfolio/xraybox.png"],
+        "img": "/assets/img/portfolio/xraybox.png",
+        "features": [
+          "Responsive",
+          "Server Side Rendering(SSR)",
+          "Various animations to load",
+          "fast load"
+        ]
+      },
       {
         "img": "./assets/img/portfolio/dashboard.png",
         "tittle": "Mangement dashboard",

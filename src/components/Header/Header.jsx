@@ -77,6 +77,8 @@ const Header = ({ darkMode, setDarkMode }) => {
         centered="true"
         className="NavbarTabs"
         bgcolor="Background.paper"
+        paddingX="16px"
+        paddingY="12px"
       >
         {windowWidth <= 600 ? (
           <Box

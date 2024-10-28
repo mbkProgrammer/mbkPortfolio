@@ -30,7 +30,7 @@ const App = () => {
     stylisPlugins: [prefixer],
   });
 
-  const [online, setOnline] = useState(true);
+  // const [online, setOnline] = useState(true);
   // useEffect(() => {
   //   navigator.serviceWorker
   //     .register('./sw.js')
@@ -46,20 +46,6 @@ const App = () => {
   //   window.addEventListener('online', handleOnline);
   //   window.addEventListener('offline', handleOnline);
   // });
-
-  useEffect(() => {
-    // Start Clarity tracking
-    if (window.clarity) {
-      window.clarity('track', 'pageview');
-    }
-
-    // Clean up Clarity tracking when component unmounts
-    return () => {
-      if (window.clarity) {
-        window.clarity('track', 'pageview', { keepalive: false });
-      }
-    };
-  }, []);
 
   useEffect(() => {
     if (darkMode) {
