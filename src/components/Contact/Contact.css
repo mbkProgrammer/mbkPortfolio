@@ -20,21 +20,22 @@
 }
 
 .contactForm {
-  width: 40vw;
+  width: 100%;
   text-align: start;
 }
 
 .contact__link span {
-  transform: translateX(-25px);
   transition: 0.3s;
   white-space: nowrap;
+  transform: translateX(0);
 }
 
 .contact__link__icon {
   overflow: hidden;
   margin-right: 5px;
-  transform: translateY(-100%);
-  opacity: 0;
+
+  transform: translateY(0);
+  opacity: 1;
   transition: 0.25s;
 }
 
@@ -48,31 +49,46 @@
 
 .contact__link--action {
   font-size: 20px;
-  display: none;
+  display: inline;
+  align-items: center;
 }
+
+.contact_container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-top: 40px;
+
+}
+
 .contact__img {
-  height: 100%;
-  width: 40vw;
-  max-width: 480px;
+  /* height: 250px; */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 12px;
   user-select: none;
 }
 
-@media (max-width: 780px) {
+@media (min-width: 780px) {
+  .contact_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 40px;
+  }
   .contact__img {
-    height: 250px;
     width: 100%;
     object-fit: scale-down;
   }
   .contact__link--action {
-    display: inline;
+    display: none;
   }
   .contact__link span {
-    transform: translateX(0);
+    transform: translateX(-25px);
   }
   .contact__link__icon {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(-100%);
+    opacity: 0;
   }
+
   .phone__number {
     margin: 0 10px;
   }

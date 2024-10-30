@@ -59,9 +59,9 @@ const Contact = () => {
           {t('contact.alertText')}
         </Alert>
       </Collapse>
-      <Box textAlign="center" columnGap="20px" rowGap="30px" display="flex" alignItems="center" justifyContent="center" flexWrap="wrap">
+      <Box textAlign="center" className="contact_container">
         <img src="./assets/img/Contact.png" alt="contact" className="contact__img" />
-        <Box color="secondary.light" className="contactForm">
+        <Box color="primary.light" className="contactForm">
           <Typography textAlign="center" variant="h4">
             {t('contact.formTitle')}
           </Typography>
@@ -102,7 +102,7 @@ const Contact = () => {
             </LoadingButton>
           </FormControl>
         </Box>
-        <Box mt="30px" textAlign="start" color="secondary.light" overflow="hidden">
+        <Box mt="30px" textAlign="start" color="primary.light" overflow="hidden">
           <Typography variant="h3">
             {t('contact.title')}
           </Typography>
